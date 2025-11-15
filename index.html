@@ -1,291 +1,606 @@
+<!--
+    This is the index.html file, the main landing page for the MetricDrive website.
+    Its primary purpose is to attract and educate service business owners who might be considering selling their business.
+    It outlines a partnership model, provides educational content on business valuation from a buyer's perspective,
+    and encourages owners to schedule a free consultation.
+-->
 <!DOCTYPE html>
-<html lang="en">
+<!-- Sets the document type to HTML5 -->
+<html lang="en" class="scroll-smooth">
+<!-- The root element of the page, specifying the language as English and enabling smooth scrolling for anchor links -->
 
 <head>
+    <!-- The head section contains metadata and links to external resources -->
     <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetricDrive - Business Acquisition & Partnering</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Sets the viewport to ensure the page is responsive and scales correctly on different devices -->
+    <title>Business Exit Planning & Partnership | MetricDrive - Service Business Valuation</title>
+    <!-- The title of the page, which appears in the browser tab -->
+    <meta name="description" content="MetricDrive partners with service business owners to optimize operations, educate on value, and build a plan for a high-value exit. Free consultation for business owners considering selling.">
+    <!-- A brief description of the page's content, used by search engines -->
+    <meta name="keywords" content="business exit planning, service business valuation, business partnership, business acquisition, sell business, business broker alternative, exit strategy, business optimization">
+    <meta name="author" content="MetricDrive">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://metricdrive.us/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metricdrive.us/">
+    <meta property="og:title" content="MetricDrive | Partnership & Service Business Exit Planning">
+    <meta property="og:description" content="Partner with MetricDrive to optimize operations, educate on value, and build a plan for a high-value business exit. Free consultation available.">
+    <meta property="og:image" content="https://metricdrive.us/og-image-home.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="MetricDrive - Business Exit Planning & Partnership">
+    <meta property="og:site_name" content="MetricDrive">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MetricDrive | Partnership & Service Business Exit Planning">
+    <meta name="twitter:description" content="Partner with MetricDrive to optimize operations, educate on value, and build a plan for a high-value business exit. Free consultation available.">
+    <meta name="twitter:image" content="https://metricdrive.us/og-image-home.svg">
+    <meta name="twitter:image:alt" content="MetricDrive - Business Exit Planning & Partnership">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/logo.svg">
+
+    <!-- External Resources -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117;
-            /* Dark background similar to example */
-            color: #e2e8f0;
-            /* Light text color */
+    <!-- Links to the Tailwind CSS script for utility-first CSS styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preconnects to Google Fonts for faster font loading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconnects to the Google Fonts static server -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Imports the 'Inter' and 'Lora' fonts from Google Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Links to a custom stylesheet for additional styling -->
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "name": "MetricDrive",
+      "description": "MetricDrive partners with service business owners to optimize operations, educate on value, and build a plan for a high-value exit.",
+      "url": "https://metricdrive.us",
+      "email": "mdavis@metricdrive.com",
+      "telephone": "",
+      "areaServed": {
+        "@type": "State",
+        "name": "California"
+      },
+      "serviceType": "Business Exit Planning and Partnership",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "sameAs": [],
+      "logo": "https://metricdrive.us/logo.svg"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MetricDrive",
+      "url": "https://metricdrive.us",
+      "logo": "https://metricdrive.us/logo.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "mdavis@metricdrive.com",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://metricdrive.us/"
         }
-    </style>
+      ]
+    }
+    </script>
 </head>
-
 <body class="antialiased">
-    <div class="min-h-screen flex flex-col">
-        <!-- Navigation Bar -->
-        <header class="bg-gray-900 shadow-lg py-4">
-            <div class="container mx-auto px-4 flex justify-between items-center">
-                <a href="#" class="text-3xl font-bold text-white rounded-md p-2">
-                    MetricDrive
+    <!-- The body of the page with anti-aliasing for smoother fonts -->
+
+    <!-- ================================================================= -->
+    <!-- HEADER & NAVIGATION                                               -->
+    <!-- ================================================================= -->
+    <header class="header-fixed">
+        <nav class="container nav-wrapper">
+            <a href="index.html" class="logo" aria-label="MetricDrive Home">MetricDrive</a>
+            <nav class="nav-desktop" id="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-link" aria-label="Partnership page">Partnership</a>
+                <a href="buy-box.html" class="nav-link" aria-label="Business acquisition criteria">Buy-Box</a>
+                <a href="resources.html" class="nav-link" aria-label="Free exit planning resources">Resources</a>
+            </nav>
+            <div class="nav-mobile">
+                <a href="buy-box.html" class="px-4 py-2 text-base font-medium text-amber-600 hover:text-amber-700">Buy-Box</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================================================================= -->
+    <!-- MAIN CONTENT AREA                                                 -->
+    <!-- ================================================================= -->
+    <main>
+
+        <!-- ================================================================= -->
+        <!-- SECTION 0: HERO                                                   -->
+        <!-- ================================================================= -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1 class="heading-1">Your Business is Great. But is it Sellable?</h1>
+                <p class="hero-text">
+                    I help high-quality owners build systems, prove their value, and prepare for a maximum-value exit. It starts with education.
+                </p>
+                <div class="btn-group">
+                    <a href="resources.html" class="btn-primary">Get Free Resources</a>
+                    <a href="#education" class="btn-secondary">Learn What Buyers Look For</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- SECTION 1: EDUCATION                                              -->
+        <!-- ================================================================= -->
+        <section id="education" class="section bg-white border-b border-stone-200">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Is Your Business Sellable? An Education.</h2>
+                    <p class="section-subtitle">
+                        You're curious about selling, maybe brokers have started reaching out.
+                        The first step is to understand what buyers <strong>actually</strong> value.
+                    </p>
+                </header>
+
+                <div class="grid-2-col">
+                    <div class="card-blue">
+                        <h3 class="heading-2 mb-6 text-center">The Buyer's Perspective</h3>
+                        <p class="text-body mb-6">
+                            Buyers aren't buying your past success; they are buying your future profits and taking on all the risk. 
+                        </p>
+                        <p class="text-body mb-6">
+                            Here is what they look for (and what they penalize for):
+                        </p>
+                        <div class="list-spaced">
+                            <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Owner Dependency:</strong> If the business only runs because <strong>you</strong> are there, its value is minimal. Can you take a 4-week vacation?</span>
+                            </div>
+                            <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Systems & SOPs:</strong> Are processes documented? Or is everything in your head? Buyers pay a premium for systems that are proven to work.</span>
+                            </div>
+                            <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Clean Financials (Buyer's View):</strong> A transition isn't apples-to-apples. I'll show you how a buyer <strong>really</strong> models your financials, including their debt and risk. This gets you to a real "market value," not just a "paper value."</span>
+                            </div>
+                            <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">SBA Financeability:</strong> Are your books clean enough to get an SBA loan? If not, your buyer pool is tiny, and your price will reflect that.</span>
+                            </div>
+                            <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Risk Abatement:</strong> Do you have long-term contracts? Is 80% of your business from one client? High customer concentration is a massive risk flag that lowers value.</span>
+                            </div>
+                             <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Defensibility:</strong> Is the business recession-proof? AI-proof? What are the barriers to entry that stop a new competitor?</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-stone">
+                        <h3 class="heading-2 mb-6 text-center">The Seller's Perspective</h3>
+                        <p class="text-body mb-6">
+                           You need to define what <strong>you</strong> want from an exit:
+                        </p>
+                        <div class="list-spaced">
+                            <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Your Legacy:</strong> Do you care about your employees and customers? Do you want your name to live on, or just take the cash?</span>
+                            </div>
+                            <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Post-Sale Life:</strong> Do you want to walk away clean? Consult? Stay on as a license-holder (RMO - Responsible Managing Officer)? We can structure a deal for any of these.</span>
+                            </div>
+                            <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Financial Outcomes:</strong> We'll model your scenarios. What does a "liquidation" or "asset-only" sale look like versus a "best-case" strategic sale? Understanding this informs your negotiation.</span>
+                            </div>
+                            <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Tax & Deal Structures:</strong> A cash-only sale has massive tax implications. We can explore creative structures (seller notes, upside equity) that can put more in your pocket.</span>
+                            </div>
+                             <div class="profile-bullet">
+                                <span class="profile-bullet-icon">✔</span>
+                                <span class="text-stone"><strong class="font-semibold">Risk & Reward:</strong> Are you willing to bet on the future upside? Your risk appetite determines the deal structure.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="centered-box">
+                    <h3 class="heading-2 mb-4">Do You Need a Perfect Score?</h3>
+                    <p class="text-body mb-6">
+                        No. If your business had all of this, you'd already have big offers on the table.
+                        Most businesses don't.
+                        Some of these things, like customer concentration, can't be changed without fundamentally changing your business.
+                    </p>
+                    <p class="text-body font-semibold">
+                        The goal isn't to be perfect; the goal is to understand what type of buyer is best suited for your business.
+                        From there, we can dig into the trade-offs you're willing to make to maximize your exit.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================================================================= -->
+        <!-- SECTION 2: GROWTH PARTNERSHIPS                                    -->
+        <!-- ================================================================= -->
+        <section id="partner" class="section bg-stone-50 shadow-inner-lg border-b border-stone-200">
+            <header class="section-header max-w-4xl mx-auto">
+                <h2 class="section-title">From Education to Profit</h2>
+                <p class="section-subtitle">
+                    You understand what buyers value. Here's how to build it.
+                </p>
+            </header>
+
+            <!-- Step 1: Start on Your Own (Empowerment Message) -->
+            <section class="container mb-10">
+                <div class="centered-box">
+                    <h3 class="heading-2 mb-6 text-center">Start on Your Own</h3>
+                    <p class="text-body text-center mb-6 max-w-3xl mx-auto">
+                        <strong class="font-semibold text-stone-900">My goal is to give you the framework to do this yourself.</strong>
+                    </p>
+                    <p class="text-body text-center mb-6 max-w-3xl mx-auto">
+                        The Resources section provides books, frameworks, and key concepts to help you assess your business from a buyer's perspective. You'll learn to evaluate owner dependency, document systems, understand financial modeling, and build the operational foundation that buyers value.
+                    </p>
+                    <div class="text-center">
+                        <a href="resources.html" class="btn-primary">
+                            Start with Free Resources
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 2: If You Want Help... (Partner Offer) -->
+            <section class="container mb-10 pt-8">
+                <div class="centered-box">
+                    <h3 class="heading-2 mb-6 text-center">If You Want Help</h3>
+                    <p class="text-body text-center mb-6 max-w-3xl mx-auto">
+                        If you want a partner to accelerate the process, we can partner. I become a dedicated student of your business and your craft. I maintain a <strong class="font-semibold">singular focus on your operations</strong>: no multiple listings, no distractions.
+                    </p>
+                    <p class="text-body text-center mb-6 max-w-3xl mx-auto">
+                        <strong class="font-semibold text-stone-900">My goal is to implement systems that make your business so efficient and profitable that when you do decide to sell, it commands maximum value.</strong>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Step 3: Here's the Process (The Framework - Three Pillars + Stages) -->
+            <section class="container mb-10 pt-8">
+                <header class="section-header">
+                    <h3 class="heading-2">The Partnership Process</h3>
+                    <p class="section-subtitle">
+                        We work through three stages, building three core pillars along the way: <strong>Financial Clarity</strong>, <strong>Operational Systems</strong>, and <strong>Data & Scalability</strong>.
+                    </p>
+                </header>
+                
+                <div class="process-container mb-10">
+                    <div class="process-step">
+                        <span class="text-sm font-semibold text-stone-500">STAGE 1</span>
+                        <p class="font-semibold text-stone-800 text-lg mt-1">Immerse & Get Intimate</p>
+                        <p class="text-sm text-stone-600">Full operational immersion. I learn your key drivers, model financials from a buyer's perspective, and develop deep technical expertise in your domain.</p>
+                    </div>
+                    <div class="process-arrow">→</div>
+                    <div class="process-step">
+                        <span class="text-sm font-semibold text-stone-500">STAGE 2</span>
+                        <p class="font-semibold text-stone-800 text-lg mt-1">Strategize & Build</p>
+                        <p class="text-sm text-stone-600">We establish <strong class="text-stone-800">Financial Clarity</strong> and <strong class="text-stone-800">Operational Systems</strong>. We model your financials from a buyer's perspective, create clean SBA-financeable books, document processes, develop SOPs, and implement systems that reduce owner dependency.</p>
+                    </div>
+                    <div class="process-arrow">→</div>
+                    <div class="process-step">
+                        <span class="text-sm font-semibold text-stone-500">STAGE 3</span>
+                        <p class="font-semibold text-stone-800 text-lg mt-1">Prove & Scale</p>
+                        <p class="text-sm text-stone-600">We establish <strong class="text-stone-800">Data & Scalability</strong>. We implement metrics, dashboards, and data infrastructure that demonstrate your business's value. The goal: a business ready to sell. When buyers can see clear data, proven systems, and independent operations, your business is sellable.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 4: Fee or Equity (The Bigger Pie Model) -->
+            <section class="container mb-10 pt-8">
+                <header class="section-header">
+                    <h3 class="heading-2">Fee or Equity</h3>
+                    <p class="section-subtitle">
+                        You choose how we engage. Both paths are designed to grow the pie, not just divide it.
+                    </p>
+                </header>
+                <div class="grid-2-col-md centered-box" style="margin-top: 0;">
+                    <div class="card text-center flex flex-col">
+                        <h4 class="heading-3 mb-4">Partnership for Fee</h4>
+                        <p class="text-stone mb-4 flex-grow">
+                            I execute the full optimization framework for a project fee. You retain 100% of the equity and 100% of the increased exit value.
+                        </p>
+                        <p class="text-stone mb-6 text-sm italic">
+                            <strong class="text-stone-800">Ideal when:</strong> You have capital available, prefer to retain full equity, or want a defined-scope engagement with clear deliverables.
+                        </p>
+                        <a href="#contact" class="btn-secondary">
+                            Explore Fee Partnership
+                        </a>
+                    </div>
+                    <div class="card text-center flex flex-col">
+                        <h4 class="heading-3 mb-4">Partnership for Equity</h4>
+                        <p class="text-stone mb-4 flex-grow">
+                            I waive my fees and perform the full optimization process in exchange for a small, minority equity stake. My success is 100% aligned with yours at exit.
+                        </p>
+                        <p class="text-stone mb-6 text-sm italic">
+                            <strong class="text-stone-800">Ideal when:</strong> You prefer to preserve cash flow, want aligned incentives, or believe the business needs significant work that justifies sharing equity.
+                        </p>
+                        <a href="#contact" class="btn-primary">
+                            Explore Equity Partnership
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 5: Sometimes I'm the Right Buyer (The Exit Path) -->
+            <div class="container mt-8 mb-6">
+                <p class="text-sm text-stone-500 text-center max-w-3xl mx-auto italic">
+                    As I learn your business inside and out, I may become a logical buyer at the end, since we've built something together that I'm positioned to continue growing. But that's a conversation for later. Right now, the focus is on building a sellable business.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- SECTION 3: MY MISSION (ABOUT ME)                                  -->
+        <!-- ================================================================= -->
+        <section id="mission" class="section bg-white">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">My Mission & Profile</h2>
+                    <p class="mt-4 text-xl md:text-2xl font-semibold text-blue-900 font-lora">From Tech Scale-Ups to Main Street</p>
+                </header>
+                <div>
+                    <h3 class="heading-2 mb-4">My "Why": A Creative Challenge</h3>
+                    <p class="text-body mb-6">
+                        My career has been spent in high-growth tech and consulting. After consulting for Private Equity firms buying HVAC companies, I saw a clear gap: "traditional" businesses are the backbone of our economy, but they are often undervalued because they lack the systems to prove their full worth.
+                    </p>
+                    <p class="text-body mb-6">
+                        I am not a corporate investor focused on stripping assets. I am an operator seeking a creative and financial challenge. I want to acquire or partner with businesses built on <strong class="font-semibold">high-quality workmanship</strong> and grow them by applying the same discipline I used at tech scale-ups.
+                    </p>
+                    
+                    <h3 class="heading-2 mb-4 mt-10">Proof of Discipline & Capability</h3>
+                    <p class="text-body mb-8">
+                        I thrive on solving complex organizational problems. My background is a unique blend of high-level analytics and hands-on operational grit.
+                    </p>
+                    <div class="list-spaced">
+                        <div class="profile-bullet">
+                            <span class="profile-bullet-icon">✔</span>
+                            <span class="text-stone"><strong class="font-semibold">Scaling Experience:</strong> 10+ years in data and operations at three acquired or IPO'd tech scale-ups (Snowflake, LinkedIn, TripAdvisor).</span>
+                        </div>
+                        <div class="profile-bullet">
+                            <span class="profile-bullet-icon">✔</span>
+                            <span class="text-stone"><strong class="font-semibold">Analytical Rigor:</strong> M.S. in Applied Math & Statistics; Certifications in AI, Supply Chain Optimization, and Financial Modeling.</span>
+                        </div>
+                        <div class="profile-bullet">
+                            <span class="profile-bullet-icon">✔</span>
+                            <span class="text-stone"><strong class="font-semibold">Hands-On Experience:</strong> Prior multi-unit franchise owner, data consultant for PE firms, and electrical crew volunteer (Habitat for Humanity).</span>
+                        </div>
+                        <div class="profile-bullet">
+                            <span class="profile-bullet-icon">✔</span>
+                            <span class="text-stone"><strong class="font-semibold">Personal Grit:</strong> A <strong class="font-semibold">2x Ironman Finisher</strong> who understands that discipline and perseverance are the keys to long-term success.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- SECTION 4: CONTACT                                                -->
+        <!-- ================================================================= -->
+        <section id="contact" class="section bg-white">
+            <header class="contact-header">
+                <h2 class="section-title">Let's Start the Conversation</h2>
+                <div class="max-w-3xl mx-auto mt-6">
+                    <p class="text-body mb-6">
+                        My goal is to have the most productive, high-quality conversation possible.
+                    </p>
+                    <p class="text-body mb-6">
+                        I have detailed my mission, my resources, and my partnership framework on this site. If my "bigger pie" approach resonates with you and you are a high-quality owner who is serious about building a sellable, legacy asset, I am ready for a confidential discussion.
+                    </p>
+                    <p class="text-body mb-8">
+                        To ensure our call is efficient and respects your time, please be prepared to discuss your primary challenges and goals.
+                    </p>
+                </div>
+                <a href="https://calendly.com/mdavis-metricdrive/30min" target="_blank" rel="noopener noreferrer" class="btn-amber mt-6">
+                    Schedule Your 30-Minute Call
                 </a>
-                <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="#home"
-                                class="text-gray-300 hover:text-white transition-colors duration-300 rounded-md py-2 px-3">Home</a>
-                        </li>
-                        <li><a href="#how-we-help"
-                                class="text-gray-300 hover:text-white transition-colors duration-300 rounded-md py-2 px-3">How
-                                We Help</a></li>
-                        <li><a href="#acquisition-focus"
-                                class="text-gray-300 hover:text-white transition-colors duration-300 rounded-md py-2 px-3">Acquisition
-                                Focus</a></li>
-                        <li><a href="#about"
-                                class="text-gray-300 hover:text-white transition-colors duration-300 rounded-md py-2 px-3">About
-                                Us</a></li>
-                        <li><a href="#contact"
-                                class="text-gray-300 hover:text-white transition-colors duration-300 rounded-md py-2 px-3">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Hero Section -->
-        <section id="home"
-            class="relative bg-gradient-to-br from-gray-900 to-indigo-950 text-white py-20 md:py-32 flex-grow flex items-center overflow-hidden">
-            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between z-10">
-                <div class="max-w-2xl text-center md:text-left mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 rounded-md p-2">
-                        Your Strategic Partner for Business Evolution
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-300 mb-8 rounded-md p-2">
-                        We acquire and partner with businesses ready for their next chapter. Let's explore a seamless
-                        transition or a powerful collaboration.
-                    </p>
-                    <a href="#contact"
-                        class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
-                        Connect With Us &rarr;
-                    </a>
-                </div>
-                <!-- Placeholder for the image/graphic, similar to the mountain in the example -->
-                <div class="relative w-full md:w-1/2 flex justify-center md:justify-end">
-                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Future+Growth"
-                        alt="Abstract business growth graphic"
-                        class="rounded-3xl shadow-xl transform rotate-3 scale-95 md:scale-100 object-cover object-center max-w-full h-auto">
-                    <!-- Subtle wave pattern, similar to the example -->
-                    <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100"
-                        preserveAspectRatio="none">
-                        <path d="M0,70 Q25,80 50,70 T100,70 L100,100 L0,100 Z" fill="currentColor"></path>
-                    </svg>
-                </div>
-            </div>
-            <!-- Background wave effect (simplified) -->
-            <svg class="absolute bottom-0 left-0 w-full h-48 opacity-10" viewBox="0 0 1440 320"
-                preserveAspectRatio="none">
-                <path fill="#ffffff" fill-opacity="0.1"
-                    d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,128C672,128,768,192,864,192C960,192,1056,128,1152,117.3C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                </path>
-            </svg>
+            </header>
         </section>
+    </main>
 
-        <!-- How We Help Businesses Thrive Section (formerly part of About/Services) -->
-        <section id="how-we-help" class="bg-gray-800 py-16 md:py-24">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-5xl font-bold mb-12 text-white rounded-md p-2">
-                    How We Help Businesses Thrive
-                </h2>
-                <!-- Rewritten paragraph about continuity and structured transition -->
-                <p class="text-gray-300 leading-relaxed max-w-4xl mx-auto mb-12 text-lg rounded-md p-2">
-                    For business owners considering their next step, we offer more than just an acquisition – we provide
-                    a seamless path to your future. Our approach prioritizes continuity, robust operational support, and
-                    a structured transition that can include mentorship or ongoing partnership. This allows you to
-                    gradually step back from day-to-day operations with confidence, ensuring your business continues to
-                    flourish under capable stewardship. Preserve your legacy, achieve a comfortable retirement, and even
-                    explore retaining a minority stake or consultancy role with a partner committed to your long-term
-                    success.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <!-- Card 1: Selling Your Business -->
-                    <div
-                        class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
-                        <h3 class="text-2xl font-semibold mb-4 text-white rounded-md p-2">Sell Your Business</h3>
-                        <p class="text-gray-300 leading-relaxed rounded-md p-2">
-                            Ready to transition? We offer fair valuations and a streamlined acquisition process,
-                            ensuring your legacy is in good hands and your exit is smooth.
-                        </p>
-                    </div>
-                    <!-- Card 2: Strategic Partnership -->
-                    <div
-                        class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
-                        <h3 class="text-2xl font-semibold mb-4 text-white rounded-md p-2">Strategic Partnering</h3>
-                        <p class="text-gray-300 leading-relaxed rounded-md p-2">
-                            Explore growth through collaboration. We partner with businesses to unlock new opportunities
-                            and achieve shared success.
-                        </p>
-                    </div>
-                    <!-- Card 3: Maximizing Value -->
-                    <div
-                        class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
-                        <h3 class="text-2xl font-semibold mb-4 text-white rounded-md p-2">Maximize Your Value</h3>
-                        <p class="text-gray-300 leading-relaxed rounded-md p-2">
-                            Whether selling or partnering, our focus is on ensuring you achieve the best possible
-                            outcome and realize your business's full potential.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- ================================================================= -->
+    <!-- FOOTER                                                            -->
+    <!-- ================================================================= -->
+    <footer class="footer">
+        <div class="container py-8 text-center text-stone-500">
+            <div class="footer-links">
+                <!-- Footer Navigation Links -->
+                <a href="index.html" class="text-sm text-stone-500 hover:text-blue-900">Partnership</a>
+                <a href="buy-box.html" class="text-sm text-stone-500 hover:text-blue-900">Buy-Box</a>
+                <a href="resources.html" class="text-sm text-stone-500 hover:text-blue-900">Resources</a>
 
-        <!-- Our Acquisition Focus Section -->
-        <section id="acquisition-focus" class="bg-gradient-to-b from-gray-900 to-indigo-950 py-16 md:py-24 text-white">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 rounded-md p-2">
-                    Our Acquisition Focus
-                </h2>
-                <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700">
-                    <ul class="space-y-6 text-lg">
-                        <li class="flex items-start rounded-md p-2">
-                            <span class="text-yellow-500 text-2xl mr-4">&#10003;</span>
-                            <div>
-                                <strong class="block text-xl mb-1">Industry:</strong>
-                                <ul class="list-disc list-inside ml-6 text-gray-300 space-y-1">
-                                    <li>Data heavy industries</li>
-                                    <li>Financial services such as CPA and Accounting</li>
-                                    <li>Skilled trades including Electrical Contracting, IT Services (Managed Service
-                                        Providers), Low Voltage Systems & Integration, Plumbing, HVAC, and General
-                                        Contracting</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="flex items-start rounded-md p-2">
-                            <span class="text-yellow-500 text-2xl mr-4">&#10003;</span>
-                            <div>
-                                <strong class="block text-xl mb-1">Location:</strong>
-                                <span class="text-gray-300">Northern California</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start rounded-md p-2">
-                            <span class="text-yellow-500 text-2xl mr-4">&#10003;</span>
-                            <div>
-                                <strong class="block text-xl mb-1">Key Metrics:</strong>
-                                <ul class="list-disc list-inside ml-6 text-gray-300 space-y-1">
-                                    <li>$1M+ Revenue</li>
-                                    <li>$250K+ Seller's Discretionary Earnings (SDE) or EBITDA</li>
-                                    <li>Rent &lt; 20% Gross Revenue</li>
-                                    <li>10-50 Employees</li>
-                                    <li>3+ Years Steady Revenue or Consistent Growth</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="flex items-start rounded-md p-2">
-                            <span class="text-yellow-500 text-2xl mr-4">&#10003;</span>
-                            <div>
-                                <strong class="block text-xl mb-1">Continuity & Legacy:</strong>
-                                <span class="text-gray-300">A strong commitment to ensuring seamless employee and
-                                    customer continuity post-acquisition.</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </section>
+            &copy; 2025 MetricDrive | Acquisition & Partnership
+        </div>
+    </footer>
 
-        <!-- About MetricDrive Section (Moved Lower) -->
-        <section id="about" class="bg-gray-800 py-16 md:py-24">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-5xl font-bold mb-8 text-white rounded-md p-2">
-                    About MetricDrive
-                </h2>
-                <!-- About Me Content - Rewritten for professionalism -->
-                <p class="text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8 text-lg rounded-md p-2">
-                    With over a decade of diverse experience spanning data analytics, operational leadership, and
-                    hands-on project management, MetricDrive is led by an individual committed to driving business
-                    growth and successful transitions. My professional journey includes serving as a lead data scientist
-                    at industry giants like LinkedIn and Snowflake, where I honed my expertise in leveraging data for
-                    strategic advantage. I further applied this knowledge by building a successful data consulting
-                    practice, empowering Small and Medium Businesses (SMBs) to optimize operations and increase
-                    profitability through data-driven strategies. My entrepreneurial spirit extends to owning and
-                    operating a franchise athletic performance training facility, providing valuable insight into
-                    operational excellence and team leadership. Beyond corporate and entrepreneurial ventures, I am a
-                    dedicated core volunteer with Habitat for Humanity, undertaking a full remodel of a 2200 sq. ft.
-                    home as an owner-builder, demonstrating a meticulous approach to complex projects and a commitment
-                    to tangible results.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4 mt-8">
-                    <a href="YOUR_LINKEDIN_PROFILE_URL" target="_blank" rel="noopener noreferrer"
-                        class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
-                        Connect on LinkedIn
-                    </a>
-                    <a href="https://www.databuddy.us" target="_blank" rel="noopener noreferrer"
-                        class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
-                        Visit DataBuddy.us
-                    </a>
-                </div>
-            </div>
-        </section>
+    <!-- ================================================================= -->
+    <!-- JAVASCRIPT                                                        -->
+    <!-- ================================================================= -->
+    <script>
+        // This script runs after the HTML document has been fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Set Active Nav Link Based on Current Page ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const currentPath = window.location.pathname;
+            const currentPage = currentPath.split('/').pop() || '';
+            
+            // Remove active class from all nav links first
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const linkHref = link.getAttribute('href');
+                
+                // Check if current page matches the link href
+                // Handle home page (index.html) - matches when pathname is /, /index.html, or empty
+                if (linkHref === 'index.html') {
+                    if (currentPage === '' || currentPage === 'index.html' || currentPath === '/' || currentPath.endsWith('/index.html')) {
+                        link.classList.add('active');
+                    }
+                } else if (linkHref === currentPage || currentPath.endsWith('/' + linkHref)) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // --- Smooth Scrolling & Active Nav Highlighting ---
+            const sections = document.querySelectorAll('main > section');
 
-        <!-- Contact Form Section -->
-        <section id="contact" class="bg-gradient-to-b from-gray-900 to-gray-800 py-16 md:py-24">
-            <div class="container mx-auto px-4 max-w-2xl">
-                <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-white rounded-md p-2">
-                    Let's Connect
-                </h2>
-                <div class="bg-gray-900 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700">
-                    <p class="text-gray-300 text-center mb-8 rounded-md p-2">
-                        Interested in discussing an acquisition or a partnership? Fill out the form below, and we'll get
-                        back to you promptly.
-                    </p>
-                    <!--
-                        The 'mailto:' action will open the user's default email client.
-                        For a more robust solution that sends email directly from the server without user interaction,
-                        you would typically use a backend service (e.js., Node.js, Python, PHP) to process the form.
-                        This basic HTML approach relies on the client's mail application.
-                    -->
-                    <form action="mailto:mdavis@metricdrive.us" method="post" enctype="text/plain" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-gray-400 text-sm font-bold mb-2">Name</label>
-                            <input type="text" id="name" name="Name"
-                                class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-800 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300"
-                                placeholder="Your Name" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-400 text-sm font-bold mb-2">Email</label>
-                            <input type="email" id="email" name="Email"
-                                class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-800 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300"
-                                placeholder="your@example.com" required>
-                        </div>
-                        <div>
-                            <label for="subject" class="block text-gray-400 text-sm font-bold mb-2">Subject</label>
-                            <input type="text" id="subject" name="Subject"
-                                class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-800 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300"
-                                placeholder="Inquiry about Acquisition/Partnership">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-400 text-sm font-bold mb-2">Message</label>
-                            <textarea id="message" name="Message" rows="6"
-                                class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-800 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300"
-                                placeholder="Tell us about your business or what you're looking for..."
-                                required></textarea>
-                        </div>
-                        <div class="flex justify-center">
-                            <button type="submit"
-                                class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-10 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+            // Function to smoothly scroll to a section when a nav link is clicked
+            function scrollToSection(e) {
+                const href = e.currentTarget.getAttribute('href');
+                
+                // If it's a link to another page, let the browser handle it normally
+                if (href.includes('.html')) {
+                    return;
+                }
 
-        <!-- Footer -->
-        <footer class="bg-gray-900 text-gray-400 py-8 mt-auto">
-            <div class="container mx-auto px-4 text-center">
-                <p class="mb-2 rounded-md p-2">&copy; 2025 MetricDrive. All rights reserved.</p>
-                <p class="text-sm rounded-md p-2">For inquiries, contact: <a href="mailto:mdavis@metricdrive.us"
-                        class="text-yellow-500 hover:underline">mdavis@metricdrive.us</a></p>
-            </div>
-        </footer>
-    </div>
+                e.preventDefault(); // Prevent the default anchor link behavior
+                const targetId = href;
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const header = document.querySelector('header');
+                    const headerHeight = header ? header.offsetHeight : 0;
+                    // Calculate the target position, accounting for the sticky header height
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20; // 20px buffer
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+
+            // Attach the scroll function to all navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', scrollToSection);
+            });
+            
+            // Also apply the scroll function to any other on-page anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('href').length > 1) {
+                        scrollToSection(e);
+                    }
+                });
+            });
+
+
+            // --- Accordion Logic ---
+            const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+            accordionTriggers.forEach(trigger => {
+                const content = trigger.nextElementSibling;
+                const icon = trigger.querySelector('.accordion-icon');
+                
+                trigger.addEventListener('click', () => {
+                    const isOpen = content.classList.contains('open');
+                    
+                    // Toggle clicked one
+                    if (isOpen) {
+                        content.classList.remove('open');
+                        content.style.maxHeight = null;
+                        if (icon) icon.textContent = '+';
+                    } else {
+                        content.classList.add('open');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        if (icon) icon.textContent = '−';
+                    }
+                });
+
+                // Recalculate max-height on transition end if it's set to 'none'
+                content.addEventListener('transitionend', () => {
+                    if (content.classList.contains('open') && content.style.maxHeight === 'none') {
+                         setTimeout(() => {
+                           content.style.maxHeight = content.scrollHeight + 'px';
+                         }, 0);
+                    }
+                });
+            });
+
+            // Re-calculate height on window resize for open accordions
+             window.addEventListener('resize', () => {
+                const openAccordions = document.querySelectorAll('.accordion-content.open');
+                openAccordions.forEach(content => {
+                    // Set to auto to measure, then back to scrollHeight
+                    content.style.maxHeight = 'none'; 
+                    const scrollHeight = content.scrollHeight + 'px';
+                    content.style.maxHeight = scrollHeight;
+                });
+            });
+
+            // --- ScrollSpy for Highlighting the Active Nav Link ---
+            // This uses the IntersectionObserver API to detect which section is currently in the viewport
+            // Only applies to links that point to sections (not page links)
+            const navLinksDesktop = document.querySelectorAll('#main-nav .nav-link');
+            const pageLinks = Array.from(navLinksDesktop).filter(link => {
+                const href = link.getAttribute('href');
+                return href && !href.startsWith('#') && href.includes('.html');
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        // Only toggle active class for section links (those starting with #)
+                        navLinksDesktop.forEach(link => {
+                            const href = link.getAttribute('href');
+                            // Only update section links, preserve page link active states
+                            if (href && href.startsWith('#')) {
+                                link.classList.toggle('active', href === `#${id}`);
+                            }
+                        });
+                    }
+                });
+            }, { 
+                // Adjust the rootMargin to trigger when the section is in the top 25% of the viewport
+                rootMargin: '-25% 0px -75% 0px',
+                threshold: 0 
+            });
+
+            // Observe all the main content sections
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
 </body>
-
 </html>
