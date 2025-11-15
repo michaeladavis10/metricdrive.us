@@ -1,0 +1,49 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#fdfcf9"/>
+  
+  <!-- Decorative gradient overlay -->
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#eff6ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#dbeafe;stop-opacity:0.4" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad2)"/>
+  
+  <!-- Main content area -->
+  <g transform="translate(100, 150)">
+    <!-- Logo/Brand name -->
+    <text x="0" y="0" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#1e3a8a">
+      MetricDrive
+    </text>
+    
+    <!-- Main headline -->
+    <text x="0" y="100" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#0c0a09">
+      Business Acquisition Criteria
+    </text>
+    <text x="0" y="160" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#0c0a09">
+      &amp; Buy-Box
+    </text>
+    
+    <!-- Key criteria highlights -->
+    <g transform="translate(0, 220)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="#44403c" font-weight="600">
+        Target SDE: $500k+ | Valuation: $1M - $5M
+      </text>
+      <text x="0" y="40" font-family="Arial, sans-serif" font-size="20" fill="#57534e">
+        Specialty Service Businesses in Northern California
+      </text>
+      <text x="0" y="80" font-family="Arial, sans-serif" font-size="18" fill="#44403c">
+        Electrical • Telecommunications • Logistics • B2B Services
+      </text>
+    </g>
+    
+    <!-- Accent line -->
+    <rect x="0" y="320" width="500" height="4" fill="#1e3a8a" rx="2"/>
+  </g>
+  
+  <!-- Bottom accent -->
+  <rect x="0" y="600" width="1200" height="30" fill="#1e3a8a" opacity="0.1"/>
+</svg>
+

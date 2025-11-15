@@ -1,0 +1,46 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#fdfcf9"/>
+  
+  <!-- Decorative gradient overlay -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#eff6ff;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#fef3c7;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad1)"/>
+  
+  <!-- Main content area -->
+  <g transform="translate(100, 150)">
+    <!-- Logo/Brand name -->
+    <text x="0" y="0" font-family="Georgia, serif" font-size="72" font-weight="700" fill="#1e3a8a">
+      MetricDrive
+    </text>
+    
+    <!-- Main headline -->
+    <text x="0" y="100" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#0c0a09">
+      Unlock Your Business's True Value
+    </text>
+    
+    <!-- Subheadline -->
+    <text x="0" y="160" font-family="Arial, sans-serif" font-size="28" fill="#57534e">
+      Business Exit Planning &amp; Partnership
+    </text>
+    
+    <!-- Description -->
+    <text x="0" y="220" font-family="Arial, sans-serif" font-size="22" fill="#44403c" font-weight="500">
+      Partner with MetricDrive to optimize operations, educate on value,
+    </text>
+    <text x="0" y="260" font-family="Arial, sans-serif" font-size="22" fill="#44403c" font-weight="500">
+      and build a plan for a high-value business exit.
+    </text>
+    
+    <!-- Call to action accent -->
+    <rect x="0" y="300" width="400" height="4" fill="#f59e0b" rx="2"/>
+  </g>
+  
+  <!-- Bottom accent -->
+  <rect x="0" y="600" width="1200" height="30" fill="#1e3a8a" opacity="0.1"/>
+</svg>
+
